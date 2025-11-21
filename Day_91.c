@@ -1,0 +1,31 @@
+// Q141 (Struct)
+// Define a structure Student with name, roll_no, and marks
+// Then read and print one student's data.
+
+#include <stdio.h>
+
+struct Student {
+    char name[50];
+    int roll_no;
+    float marks;
+};
+
+int main(void) {
+    struct Student s;
+
+    printf("Enter student name: ");
+    scanf("%s", s.name);   // reads a single-word name
+
+    printf("Enter roll number: ");
+    scanf("%d", &s.roll_no);
+
+    printf("Enter marks: ");
+    scanf("%f", &s.marks);
+
+    printf("\n--- Student Details ---\n");
+    printf("Name      : %s\n", s.name);
+    printf("Roll No   : %d\n", s.roll_no);
+    printf("Marks     : %.2f\n", s.marks);
+
+    return 0;
+}
